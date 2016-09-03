@@ -12,6 +12,10 @@ def test_password(password, hashed_password, salt):
 def main():
     password = input("Enter password: ")
     hashed_password, salt = get_password(INPUT_FILE)
-
+    if test_password(password, hashed_password, salt):
+        print("Password correct")
+    else:
+        print("Password incorrect")
+        
 if __name__ == "__main__":
     main()
