@@ -7,7 +7,8 @@ def get_password(filename):
     return (password, salt)
 
 def main():
-    password, salt = get_password(INPUT_FILE)
+    password = input("Enter password: ")
+    hashed_password, salt = get_password(INPUT_FILE)
 
 if __name__ == "__main__":
     main()
