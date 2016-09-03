@@ -7,7 +7,7 @@ def get_password(filename):
     return (password, salt)
 
 def test_password(password, hashed_password, salt):
-    return hashed_password = sha512(password.encode() + salt.encode())
+    return hashed_password == sha512(password.encode() + salt.encode()).hexdigest()
 
 def main():
     password = input("Enter password: ")
@@ -16,6 +16,6 @@ def main():
         print("Password correct")
     else:
         print("Password incorrect")
-        
+
 if __name__ == "__main__":
     main()
